@@ -8,7 +8,6 @@ const GetInTouch: React.FC = () => {
     const [phone, setPhone] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubscribed, setIsSubscribed] = useState(false);
-    const [cooldown, setCooldown] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getGeneralProperties, Property } from '../lib/storage';
-import { MapPin, Instagram, ExternalLink } from 'lucide-react';
+import { MapPin, Instagram } from 'lucide-react';
 
 const PropertiesPage: React.FC = () => {
   const [properties, setProperties] = useState<Property[]>([]);
@@ -81,7 +81,7 @@ const PropertiesPage: React.FC = () => {
                     <span>{p.price ? `₹ ${p.price}` : 'Market Rate'}</span>
                     <button 
                       onClick={() => {
-                        import('../lib/utils').then(u => u.handleWhatsAppInquiry('shyam', p));
+                        import('../lib/utils').then(u => u.handleWhatsAppInquiry(p));
                       }}
                       className="btn btn-primary" 
                       style={{ padding: '0.5rem 1rem', fontSize: '0.8rem' }}

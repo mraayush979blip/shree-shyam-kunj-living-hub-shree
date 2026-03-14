@@ -34,7 +34,7 @@ export const convertGDriveLink = (url: string): string => {
   return url;
 };
 
-export const handleWhatsAppInquiry = (agent: 'shyam', property: any) => {
+export const handleWhatsAppInquiry = (property: any) => {
   const shyamNum = "919617573084"; 
   
   const number = shyamNum;

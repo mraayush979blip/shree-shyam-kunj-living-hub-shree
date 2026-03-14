@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { getGeneralProperties, getFeaturedProperties, addPropertyToStorage, removePropertyFromStorage, updatePropertyInStorage, getSubscribers, uploadImage, sendPropertyAlert, Property } from '../lib/storage';
 import { convertGDriveLink } from '../lib/utils';
 import { supabase } from '../lib/supabase';
-import { LayoutDashboard, Home, Users, Settings, Plus, LogOut, ExternalLink, X, Edit2, UserPlus, TrendingUp, Building } from 'lucide-react';
+import { LayoutDashboard, Users, Plus, LogOut, ExternalLink, X, Edit2, TrendingUp, Building } from 'lucide-react';
 import '../dashboard.css';
 
 const Dashboard: React.FC = () => {

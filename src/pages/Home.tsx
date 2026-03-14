@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getFeaturedProperties, Property } from '../lib/storage';
-import { ArrowRight, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 
 const Home: React.FC = () => {
   const [featured, setFeatured] = useState<Property[]>([]);
