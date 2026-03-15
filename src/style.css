@@ -54,6 +54,7 @@ body {
   width: 100%;
   position: relative;
   max-width: 100vw;
+  background-color: var(--color-bg);
 }
 
 body {
@@ -66,10 +67,20 @@ body {
   background-repeat: no-repeat;
   color: var(--color-text-main);
   line-height: 1.6;
-  user-select: none; /* Block selection */
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  /* Fix scroll bounce colors */
+  overscroll-behavior-y: none;
+}
+
+/* Disable fixed background on mobile to prevent jumping */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-size: auto 100%; /* Better for mobile performance */
+  }
 }
 
 p {
@@ -633,8 +644,8 @@ h4 {
     position: absolute;
     top: 10px;
     left: 10px;
-    right: -10px;
-    bottom: -10px;
+    right: 10px; /* Changed from -10px to avoid scroll overflow */
+    bottom: 10px; /* Changed from -10px to avoid scroll overflow */
     border: 1px solid var(--color-text-main);
     z-index: -1;
 }
@@ -656,8 +667,8 @@ h4 {
     position: absolute;
     top: 5px;
     left: 5px;
-    right: -5px;
-    bottom: -5px;
+    right: 5px;
+    bottom: 5px;
     background: #FFF;
     border: 1px solid var(--color-border);
     z-index: -1;
@@ -681,8 +692,8 @@ h4 {
     position: absolute;
     top: 5px;
     left: 5px;
-    right: -5px;
-    bottom: -5px;
+    right: 5px;
+    bottom: 5px;
     background: #FFF;
     border: 1px solid var(--color-text-main);
     z-index: -1;
