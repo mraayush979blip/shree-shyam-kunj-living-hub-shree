@@ -10,6 +10,7 @@ const Footer: React.FC = () => {
                     <Link to="/about">About</Link>
                     <Link to="/properties">Properties</Link>
                     <Link to="/get-in-touch">Get in Touch</Link>
+                    <a href="https://aayush-sharma-beige.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent)', fontWeight: 600 }}>About Developer</a>
                     <Link to="/login" style={{ opacity: 0.5 }}>Admin Login</Link>
                 </div>
             </div>
