@@ -138,10 +138,16 @@ const Home: React.FC = () => {
       <section className="section">
         <div className="container">
           <div className="reveal cta-card">
-            <h2 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Ready to find your <span className="text-editorial">address</span>?</h2>
-            <p style={{ marginBottom: '3rem', color: '#94A3B8', fontSize: '1.2rem' }}>Join hundreds of families who trusted us for their dream home in Indore.</p>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '2rem', letterSpacing: '-0.02em' }}>
+              Ready to find your <span className="text-editorial" style={{ color: 'var(--color-accent)' }}>address</span>?
+            </h2>
+            <p style={{ marginBottom: '3rem', color: '#A1A1AA', fontSize: '1.2rem', maxWidth: '600px' }}>
+              Join hundreds of families who trusted us for their dream home in Indore. Professional guidance, transparent deals.
+            </p>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <Link to="/get-in-touch" className="btn btn-primary" style={{ background: '#FFF', color: 'var(--color-text-main)', padding: '1.25rem 3rem' }}>Get in Touch Today</Link>
+              <Link to="/get-in-touch" className="btn btn-primary" style={{ background: 'var(--color-accent)', color: '#FFF', padding: '1.25rem 3.5rem', borderRadius: '0', border: 'none' }}>
+                Get in Touch Today
+              </Link>
             </div>
           </div>
         </div>

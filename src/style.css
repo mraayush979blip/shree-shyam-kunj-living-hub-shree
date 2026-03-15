@@ -8,10 +8,12 @@
   /* Core Palette - Luxury Off-White & Zinc */
   --color-bg: #FAF9F6;
   --color-surface: #F5F5F3;
-  --color-text-main: #0B0B0C; /* Ink Black */
+  --color-text-main: #0B0B0C;
+  /* Ink Black */
   --color-text-soft: #3F3F46;
   --color-text-dim: #71717A;
-  --color-accent: #8B7355; /* Burnished Bronze */
+  --color-accent: #8B7355;
+  /* Burnished Bronze */
   --color-accent-soft: rgba(139, 115, 85, 0.08);
 
   /* System Colors */
@@ -73,7 +75,8 @@ body {
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;
-    background-size: auto 100%; /* Better for mobile performance */
+    background-size: auto 100%;
+    /* Better for mobile performance */
   }
 }
 
@@ -84,13 +87,16 @@ p {
   letter-spacing: -0.01em;
 }
 
-strong, b {
+strong,
+b {
   font-weight: 700;
   color: var(--color-text-main);
 }
 
 /* Allow selection in inputs for usability */
-input, textarea, [contenteditable="true"] {
+input,
+textarea,
+[contenteditable="true"] {
   user-select: text;
   -webkit-user-select: text;
 }
@@ -259,7 +265,7 @@ h4 {
 .btn-primary:hover {
   background-color: #000;
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .btn-outline {
@@ -460,29 +466,33 @@ h4 {
 }
 
 .property-card {
-  background: rgba(255, 255, 255, 0.4); /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.4);
+  /* Glassmorphism effect */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 0;
-  border: 1px solid rgba(228, 228, 231, 0.5); /* Soft border */
+  border: 1px solid rgba(228, 228, 231, 0.5);
+  /* Soft border */
   overflow: hidden;
   transition: var(--trans-base);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Softer shadow */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  /* Softer shadow */
 }
 
 .property-card:hover {
   border-color: var(--color-text-main);
   transform: translateY(-8px) rotate(-1deg);
-  box-shadow: 20px 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .card-img-wrapper {
   aspect-ratio: 16/10;
   overflow: hidden;
   position: relative;
-  background: rgba(0, 0, 0, 0.02); /* Very light placeholder */
+  background: rgba(0, 0, 0, 0.02);
+  /* Very light placeholder */
 }
 
 .card-img-wrapper::after {
@@ -581,8 +591,8 @@ h4 {
   opacity: 0;
   transform: translateY(20px) scale(0.98);
   filter: blur(5px);
-  transition: 
-    opacity 0.6s var(--ease-standard), 
+  transition:
+    opacity 0.6s var(--ease-standard),
     transform 0.6s var(--ease-standard),
     filter 0.6s var(--ease-standard);
   will-change: transform, opacity, filter;
@@ -624,24 +634,39 @@ h4 {
 }
 
 .cta-card {
-  background: var(--color-text-main); /* Ink Black */
+  background: linear-gradient(rgba(11, 11, 12, 0.9), rgba(11, 11, 12, 0.9)),
+    url('https://lh3.googleusercontent.com/p/AF1QipNOENXVUPQa76gxiCbtk1auzfJESAqm10KYwCBS=s1600-w1600');
+  background-size: cover;
+  background-position: center;
   color: #FFF;
-  padding: 6rem;
+  padding: 8rem 4rem;
   border-radius: 0;
   text-align: center;
   position: relative;
-  box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cta-card::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px; /* Changed from -10px to avoid scroll overflow */
-    bottom: 10px; /* Changed from -10px to avoid scroll overflow */
-    border: 1px solid var(--color-text-main);
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid rgba(139, 115, 85, 0.3);
+  /* Soft Bronze Border */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cta-card>* {
+  position: relative;
+  z-index: 2;
 }
 
 .contact-form-card {
@@ -650,47 +675,47 @@ h4 {
   -webkit-backdrop-filter: blur(12px);
   padding: 4rem 3rem;
   border-radius: 0;
-  box-shadow: 10px 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05);
   width: 100%;
   border: 1px solid rgba(228, 228, 231, 0.5);
   position: relative;
 }
 
 .contact-form-card::before {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    background: #FFF;
-    border: 1px solid var(--color-border);
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: #FFF;
+  border: 1px solid var(--color-border);
+  z-index: -1;
 }
 
 .login-card {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 4rem;
-    border-radius: 0;
-    box-shadow: 10px 10px 30px rgba(0,0,0,0.05);
-    width: 100%;
-    max-width: 500px;
-    border: 1px solid rgba(228, 228, 231, 0.5);
-    position: relative;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 4rem;
+  border-radius: 0;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid rgba(228, 228, 231, 0.5);
+  position: relative;
 }
 
 .login-card::after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    background: #FFF;
-    border: 1px solid var(--color-text-main);
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: #FFF;
+  border: 1px solid var(--color-text-main);
+  z-index: -1;
 }
 
 @media (max-width: 1024px) {
@@ -733,12 +758,14 @@ h4 {
     transform: translateY(-100%);
     transition: transform 0.6s var(--ease-standard);
     z-index: 1000;
-    pointer-events: none; /* Add this */
+    pointer-events: none;
+    /* Add this */
   }
 
   .nav-links.open {
     transform: translateY(0);
-    pointer-events: auto; /* Add this */
+    pointer-events: auto;
+    /* Add this */
   }
 
   .nav-link {
