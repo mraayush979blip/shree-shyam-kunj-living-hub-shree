@@ -9,10 +9,15 @@ const PropertiesPage: React.FC = () => {
     const loadData = async () => {
       const data = await getGeneralProperties();
       setProperties(data);
-      initReveal();
     };
     loadData();
   }, []);
+
+  useEffect(() => {
+    if (properties.length > 0) {
+      setTimeout(() => initReveal(), 100);
+    }
+  }, [properties]);
 
   const initReveal = () => {
     const observer = new IntersectionObserver((entries) => {

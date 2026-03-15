@@ -10,10 +10,15 @@ const Home: React.FC = () => {
     const loadData = async () => {
       const data = await getFeaturedProperties();
       setFeatured(data);
-      initReveal();
     };
     loadData();
   }, []);
+
+  useEffect(() => {
+    if (featured.length > 0) {
+      setTimeout(() => initReveal(), 100);
+    }
+  }, [featured]);
 
   const initReveal = () => {
     const observer = new IntersectionObserver((entries) => {

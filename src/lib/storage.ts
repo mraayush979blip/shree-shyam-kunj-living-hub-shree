@@ -76,11 +76,11 @@ export const getGeneralProperties = async (): Promise<Property[]> => {
     .order('created_at', { ascending: false });
   
   if (error) {
-    console.error("Error fetching general properties:", error);
+    console.error("Supabase Error [General Properties]:", error);
     return [];
   }
   
-  return data.map(mapDbToProperty);
+  return (data || []).map(mapDbToProperty);
 };
 
 export const getFeaturedProperties = async (): Promise<Property[]> => {
@@ -91,11 +91,11 @@ export const getFeaturedProperties = async (): Promise<Property[]> => {
     .order('created_at', { ascending: false });
 
   if (error) {
-    console.error("Error fetching featured properties:", error);
+    console.error("Supabase Error [Featured Properties]:", error);
     return [];
   }
   
-  return data.map(mapDbToProperty);
+  return (data || []).map(mapDbToProperty);
 };
 
 export const addPropertyToStorage = async (type: 'featured' | 'general', property: any) => {
